@@ -7,18 +7,49 @@
 //
 
 import UIKit
+import SKToast
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        SKToast.backgroundStyle(.light)
+        SKToast.messageTextColor(UIColor.black)
+        let myFont = UIFont(name: "AvenirNext-DemiBold", size: 16)
+        SKToast.messageFont(myFont!)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    // MARK: - SKToast Styles
+    @IBAction func changeToastViewStyleButtonTapped(_ segment: UISegmentedControl) {
+        
+        switch segment.selectedSegmentIndex {
+            
+        case 1:
+            SKToast.backgroundStyle(.extraLight)
+            SKToast.messageTextColor(UIColor.black)
+        case 2:
+            SKToast.backgroundStyle(.dark)
+            SKToast.messageTextColor(UIColor.white)
+        default:
+            SKToast.backgroundStyle(.light)
+            SKToast.messageTextColor(UIColor.black)
+        }
     }
-
+    
+    // MARK: - Show Toast
+    @IBAction func showToastViewButtonTapped(_ sender: Any) {
+        
+        SKToast.show(withMessage: "Success seems to be connected with action. Successful people keep moving. They make mistakes, but they don't quit.")
+        
+        /*
+         SKToast.show(withMessage: "Your internet connection appears to be offline, please check your internet connection") {
+         print("Perform any task after toast disappearance.")
+         }
+         */
+    }
 }
+
 
