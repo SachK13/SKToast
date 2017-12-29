@@ -4,8 +4,6 @@
 [![License](https://img.shields.io/cocoapods/l/SKToast.svg?style=flat)](http://cocoapods.org/pods/SKToast)
 [![Platform](https://img.shields.io/cocoapods/p/SKToast.svg?style=flat)](http://cocoapods.org/pods/SKToast)
 
-`SKToast` is a simple and light weight Android like toast view for your iOS app written in swift.
-
 ![SKToast](SKToastView.gif)
 
 ## Example
