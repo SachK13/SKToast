@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03FFEEC01FF6179A00745A84 /* SKToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFEEBF1FF6179A00745A84 /* SKToastView.swift */; };
+		03FFEEC11FF6179A00745A84 /* SKToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFEEBF1FF6179A00745A84 /* SKToastView.swift */; };
 		0E800E5597F46112DEC780609381DD10 /* SKToast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6815D84903E9A44E731B976840ADB2C8 /* SKToast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		20E037AA5EF63AC404DCA919F268AC28 /* Pods-SKToast_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D9AE72564F95B48199D5D4CE8EA3EA /* Pods-SKToast_Tests-dummy.m */; };
 		5472831553D30D23146667ACA0215568 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -16,7 +18,6 @@
 		D8FE08470B2462E1BFEBA0ED8F64EECF /* Pods-SKToast_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1113CD8A54410C7A5DBE852381019D5 /* Pods-SKToast_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F41573D4648342525CA64DB83074A6F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F4D8FCA9018FC7F91FB34C0286075C93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		FA78DEA32E60DDDE539139C6679C3FFB /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C251909351EE7A918270A0424899850 /* ReplaceMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03FFEEBF1FF6179A00745A84 /* SKToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SKToastView.swift; path = SKToast/Classes/SKToastView.swift; sourceTree = "<group>"; };
 		098DE5CFA7C01A0262A80D04A9D37AC2 /* Pods-SKToast_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKToast_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		0C35EB1F62BC8875BA02618C8593A99B /* Pods-SKToast_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKToast_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		10A480D822593C5530D992ADDF4BE348 /* Pods-SKToast_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKToast_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -49,7 +51,6 @@
 		80D07E31396567BFBC462EDFF0244D70 /* Pods_SKToast_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKToast_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A5EAC7878C7C1360CEC416E519398D /* Pods-SKToast_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKToast_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		88C0E435F0062BECC4709A9C1199D7B5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C251909351EE7A918270A0424899850 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SKToast/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		91DD201A98AADCF22BE84F6517C1C456 /* Pods-SKToast_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKToast_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		945F69AA37A798855E64FD8DDB6D2F0C /* Pods-SKToast_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SKToast_Example.modulemap"; sourceTree = "<group>"; };
@@ -146,7 +147,7 @@
 		7B8D653053E2C0A6008F13E7A31C3856 /* SKToast */ = {
 			isa = PBXGroup;
 			children = (
-				8C251909351EE7A918270A0424899850 /* ReplaceMe.swift */,
+				03FFEEBF1FF6179A00745A84 /* SKToastView.swift */,
 				21044180270DA2ADE22560C186494F3C /* Support Files */,
 			);
 			name = SKToast;
@@ -296,6 +297,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					A92309C8586E5DFC89127687B9BE522B = {
+						LastSwiftMigration = 0920;
+					};
+					B51A10C1AC333E368B3F66E126E95423 = {
+						LastSwiftMigration = 0920;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -321,7 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA78DEA32E60DDDE539139C6679C3FFB /* ReplaceMe.swift in Sources */,
+				03FFEEC11FF6179A00745A84 /* SKToastView.swift in Sources */,
 				55A70EE49995F1F1CC5F22B45148D6F8 /* SKToast-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FFEEC01FF6179A00745A84 /* SKToastView.swift in Sources */,
 				5F0C3ACD1EFD2CA83848DCC3562492AF /* Pods-SKToast_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 10A480D822593C5530D992ADDF4BE348 /* Pods-SKToast_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -381,6 +392,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -444,6 +456,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
@@ -499,6 +512,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 4.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
@@ -572,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20ACDA97A95BE9385228BC5A15F250C0 /* SKToast.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -603,6 +618,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0C35EB1F62BC8875BA02618C8593A99B /* Pods-SKToast_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -627,6 +643,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -637,6 +654,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20ACDA97A95BE9385228BC5A15F250C0 /* SKToast.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
