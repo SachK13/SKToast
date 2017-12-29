@@ -26,7 +26,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ### CocoaPods
 To integrate SKToast into your Xcode project using CocoaPods, specify it in your `Podfile`:
-```swift
+```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 use_frameworks!
