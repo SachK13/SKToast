@@ -1,0 +1,6 @@
+framework module Pods_SKToast_Tests {
+  umbrella header "Pods-SKToast_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "SKToast",
+  "version": "0.1.0",
+  "summary": "A short description of SKToast.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/SachK13/SKToast",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "SachK13": "iosdev.sachin@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/SachK13/SKToast.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SKToast/Classes/**/*"
+}
