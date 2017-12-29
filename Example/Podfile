@@ -3,9 +3,5 @@ use_frameworks!
 target 'SKToast_Example' do
   pod 'SKToast', :path => '../'
 
-  target 'SKToast_Tests' do
-    inherit! :search_paths
-
-    
   end
 end
