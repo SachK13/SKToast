@@ -50,10 +50,53 @@ You can directly add the `SKToastView.swift` source files into your Xcode projec
 
 Include SKToastView wherever you need it with `import SKToast`.
 
-## Author
 
-SachK13, iosdev.sachin@gmail.com
+## Usage
+
+(see sample Xcode project in `/Example`)
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+Import the module.
+```swift
+import SKToast
+```
+
+
+Now, you can show ToastView with status message:
+```swift
+SKToast.show(withMessage: "Please check your intenet connection.")
+```
+
+
+Display ToastView with status message and completionHandler:
+```swift
+SKToast.show(withMessage: "Your internet connection appears to be offline, please check your internet connection") {
+         print("Perform any task after toast disappearance.")
+}
+```
+
+
+## Customization
+```swift
+// default is dark
+SKToast.backgroundStyle(.light)
+
+
+// default is white
+SKToast.messageTextColor(UIColor.black)
+
+
+// default is System Font
+let myFont = UIFont(name: "AvenirNext-DemiBold", size: 16)
+SKToast.messageFont(myFont!)
+
+
+// ToastView background styles
+SKToast.backgroundStyle(.light)
+SKToast.backgroundStyle(.extraLight)
+SKToast.backgroundStyle(.dark)
+```
 
 ## License
 
-SKToast is available under the MIT license. See the LICENSE file for more info.
+SKToast is available under the MIT license. [See LICENSE](https://github.com/SachK13/SKToast/blob/master/LICENSE) for details.
