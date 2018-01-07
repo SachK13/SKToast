@@ -3,5 +3,4 @@ use_frameworks!
 target 'SKToast_Example' do
   pod 'SKToast', :path => '../'
 
-  end
 end
