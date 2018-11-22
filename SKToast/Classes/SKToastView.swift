@@ -22,7 +22,7 @@ public class SKToast: NSObject {
     /// HUD Customization Properties
     fileprivate var messageFont              : UIFont            = UIFont.systemFont(ofSize  : 16, weight  : .regular)
     fileprivate var messageTextColor         : UIColor           = UIColor.white
-    fileprivate var toastViewBackgroundStyle : UIBlurEffectStyle = .dark
+    fileprivate var toastViewBackgroundStyle : UIBlurEffect.Style = .dark
     
     
     // MARK: - Singleton Accessors
@@ -131,10 +131,10 @@ public class SKToast: NSObject {
         
         if let statusMessage =  statusLabel?.text, statusMessage.count != 0 {
             
-            let attributes = [NSAttributedStringKey.font: statusLabel?.font]
+            let attributes = [NSAttributedString.Key.font: statusLabel?.font]
             let options: NSStringDrawingOptions = [.usesFontLeading, .usesLineFragmentOrigin]
             rectLabel = (statusLabel?.text?.boundingRect(with: CGSize(width: toastViewWidth-10, height: 300),
-                                                         options: options, attributes: attributes as [NSAttributedStringKey : AnyObject],
+                                                         options: options, attributes: attributes as [NSAttributedString.Key : AnyObject],
                                                          context: nil))!
             
             toastViewHeight = rectLabel.size.height + 18
@@ -155,14 +155,14 @@ public class SKToast: NSObject {
     // MARK: - ToastView Position
     @objc fileprivate func setToastViewPosistion(notification: NSNotification?) {
         var keyboardHeight: CGFloat = 0.0
-        if notification?.name == .UIApplicationDidChangeStatusBarOrientation {
+        if notification?.name == UIApplication.didChangeStatusBarOrientationNotification {
             setToastViewSize()
         }
         
         if notification != nil {
-            if let keyboardFrame: NSValue = notification?.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            if let keyboardFrame: NSValue = notification?.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
                 let keyboardRectangle = keyboardFrame.cgRectValue
-                if (notification!.name == NSNotification.Name.UIKeyboardWillShow || notification!.name == NSNotification.Name.UIKeyboardDidShow) {
+                if (notification!.name == UIResponder.keyboardWillShowNotification || notification!.name == UIResponder.keyboardDidShowNotification) {
                     keyboardHeight    = keyboardRectangle.height
                 }
             }
@@ -217,11 +217,11 @@ public class SKToast: NSObject {
     
     // MARK: - Keyboard Notifications
     func registerForKeyboardNotificatoins() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: .UIApplicationDidChangeStatusBarOrientation, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: .UIKeyboardWillHide, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: .UIKeyboardDidHide, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: .UIKeyboardDidShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: UIApplication.didChangeStatusBarOrientationNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: UIResponder.keyboardDidHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: UIResponder.keyboardDidShowNotification, object: nil)
     }
     
     
@@ -234,7 +234,7 @@ public class SKToast: NSObject {
         self.shared.messageTextColor = color
     }
     
-    public static func backgroundStyle(_ backgroundStyle: UIBlurEffectStyle) {
+    public static func backgroundStyle(_ backgroundStyle: UIBlurEffect.Style) {
         self.shared.toastViewBackgroundStyle = backgroundStyle
     }
 }
