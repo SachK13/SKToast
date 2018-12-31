@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GBd-zD-eIx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GBd-zD-eIx">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,19 +58,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pgn-me-Z6u" firstAttribute="top" secondItem="l1y-x7-mi4" secondAttribute="top" constant="-20" id="156-Ye-xyy"/>
                             <constraint firstItem="akG-fx-kzA" firstAttribute="leading" secondItem="l1y-x7-mi4" secondAttribute="leading" constant="16" id="8Qx-i7-gC3"/>
                             <constraint firstItem="gpy-78-RBO" firstAttribute="leading" secondItem="l1y-x7-mi4" secondAttribute="leading" constant="16" id="Buc-NF-Ik1"/>
                             <constraint firstItem="l1y-x7-mi4" firstAttribute="trailing" secondItem="gpy-78-RBO" secondAttribute="trailing" constant="16" id="EeT-up-q9v"/>
                             <constraint firstItem="l1y-x7-mi4" firstAttribute="trailing" secondItem="3ec-7p-BFk" secondAttribute="trailing" constant="16" id="IgA-r7-Mft"/>
-                            <constraint firstItem="pgn-me-Z6u" firstAttribute="leading" secondItem="l1y-x7-mi4" secondAttribute="leading" id="N43-Sz-6GV"/>
                             <constraint firstItem="3ec-7p-BFk" firstAttribute="leading" secondItem="l1y-x7-mi4" secondAttribute="leading" constant="16" id="SDG-p9-roT"/>
-                            <constraint firstItem="pgn-me-Z6u" firstAttribute="trailing" secondItem="l1y-x7-mi4" secondAttribute="trailing" id="W61-3a-TrF"/>
+                            <constraint firstItem="pgn-me-Z6u" firstAttribute="leading" secondItem="mIa-em-OfH" secondAttribute="leading" id="Ugg-9h-MNX"/>
                             <constraint firstItem="3ec-7p-BFk" firstAttribute="top" secondItem="l1y-x7-mi4" secondAttribute="top" constant="45" id="XHo-8v-uAy"/>
                             <constraint firstItem="gpy-78-RBO" firstAttribute="top" secondItem="3ec-7p-BFk" secondAttribute="bottom" constant="25" id="b7c-p3-cjs"/>
                             <constraint firstItem="l1y-x7-mi4" firstAttribute="bottom" secondItem="akG-fx-kzA" secondAttribute="bottom" constant="12" id="cif-EO-CGL"/>
+                            <constraint firstItem="pgn-me-Z6u" firstAttribute="top" secondItem="mIa-em-OfH" secondAttribute="top" id="gLg-UG-Pba"/>
+                            <constraint firstItem="pgn-me-Z6u" firstAttribute="bottom" secondItem="mIa-em-OfH" secondAttribute="bottom" id="jR9-Va-jWi"/>
                             <constraint firstItem="l1y-x7-mi4" firstAttribute="trailing" secondItem="akG-fx-kzA" secondAttribute="trailing" constant="16" id="kCy-5b-SKk"/>
-                            <constraint firstItem="pgn-me-Z6u" firstAttribute="bottom" secondItem="l1y-x7-mi4" secondAttribute="bottom" id="vdb-fx-4Rn"/>
+                            <constraint firstItem="pgn-me-Z6u" firstAttribute="trailing" secondItem="mIa-em-OfH" secondAttribute="trailing" id="kGz-vG-Y6C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l1y-x7-mi4"/>
                     </view>
@@ -82,6 +82,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="360" height="640"/>
+        <image name="Background" width="720" height="1280"/>
     </resources>
 </document>

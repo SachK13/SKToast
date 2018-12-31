@@ -11,6 +11,8 @@ import SKToast
 
 class ViewController: UIViewController {
     
+    
+    // MARK: - View Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -43,6 +45,7 @@ class ViewController: UIViewController {
     @IBAction func showToastViewButtonTapped(_ sender: Any) {
         
         SKToast.show(withMessage: "Success seems to be connected with action. Successful people keep moving. They make mistakes, but they don't quit.")
+        
         
         /*
          SKToast.show(withMessage: "Your internet connection appears to be offline, please check your internet connection") {
