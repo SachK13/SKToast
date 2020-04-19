@@ -243,19 +243,5 @@ public class SKToast {
     public static func backgroundStyle(_ backgroundStyle: UIBlurEffect.Style) {
         self.shared.toastViewBackgroundStyle = backgroundStyle
     }
-    
-    
-    // MARK: - Helper Methods
-    @available(iOS 13.0, *)
-    fileprivate func getKeyWindow() -> UIWindow? {
-        let window = UIApplication.shared.connectedScenes
-            .filter({$0.activationState == .foregroundActive})
-            .map({$0 as? UIWindowScene})
-            .compactMap({$0})
-            .first?.windows
-            .filter({$0.isKeyWindow}).first
-        
-        return window
-    }
 }
 
