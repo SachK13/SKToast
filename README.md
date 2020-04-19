@@ -18,9 +18,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- iOS 13.0+
-- Xcode 11+
-- Swift 5.0+
+- iOS 9.0+
+- Xcode 9.1+
+- Swift 4.0+
 
 ## Installation
 
@@ -28,11 +28,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 To integrate SKToast into your Xcode project using CocoaPods, specify it in your `Podfile`:
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '13.0'
+platform :ios, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-pod 'SKToast', '~> 1.1.0'
+pod 'SKToast', '~> 0.1.0'
 end
 ```
 
