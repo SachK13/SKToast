@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class SKToast {
+public class SKToast: NSObject {
     
     public typealias completionHandlerType = () -> Swift.Void
     
@@ -33,7 +33,15 @@ public class SKToast {
     
     
     // MARK: - Initialization
-    private init() {
+    private override init() {
+        super.init()
+        let delegate: UIApplicationDelegate = UIApplication.shared.delegate!
+        if let windowObj = delegate.window {
+            window = windowObj
+        } else {
+            window = UIApplication.shared.keyWindow
+        }
+        
         toastView = nil
         statusLabel = nil
     }
