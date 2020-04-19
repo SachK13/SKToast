@@ -161,7 +161,7 @@ public class SKToast {
     // MARK: - ToastView Position
     @objc fileprivate func setToastViewPosistion(notification: NSNotification?) {
         var keyboardHeight: CGFloat = 0.0
-        if notification?.name == UIApplication.didChangeStatusBarOrientationNotification {
+        if notification?.name == UIDevice.orientationDidChangeNotification {
             setToastViewSize()
         }
         
@@ -223,7 +223,7 @@ public class SKToast {
     
     // MARK: - Keyboard Notifications
     func registerForKeyboardNotificatoins() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: UIApplication.didChangeStatusBarOrientationNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: UIDevice.orientationDidChangeNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: UIResponder.keyboardDidHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.setToastViewPosistion), name: UIResponder.keyboardWillShowNotification, object: nil)
