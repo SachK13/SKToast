@@ -75,6 +75,20 @@ public class SKToast: NSObject {
     
     // MARK: - Configure Toastview
     fileprivate func createToastView(_ statusMessage:String, completionHandler: (completionHandlerType)? = nil) {
+        
+        if #available(iOS 13.0, *) {
+            if let windowObj = getKeyWindow() {
+                window = windowObj
+            }
+        } else {
+            // Fallback on earlier versions
+            if let delegate: UIApplicationDelegate = UIApplication.shared.delegate {
+                if let windowObj = delegate.window {
+                    window = windowObj
+                }
+            }
+        }
+        
         /// Setup Toast View
         if toastView == nil {
             let blurEffect = UIBlurEffect(style: toastViewBackgroundStyle)
