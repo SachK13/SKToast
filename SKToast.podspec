@@ -32,6 +32,7 @@ SKToast is a simple Android like toast view really easy to integrate and easy to
   s.swift_versions = ['5.0', '5.1', '5.2']
 
   s.source_files = 'SKToast/Classes/**/*'
+  s.exclude_files = 'SKToast/Classes/**/*.plist'
   
   # s.resource_bundles = {
   #   'SKToast' => ['SKToast/Assets/*.png']
