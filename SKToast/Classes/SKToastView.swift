@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class SKToast: NSObject {
+public class SKToast {
     
     public typealias completionHandlerType = () -> Swift.Void
     
@@ -20,8 +20,8 @@ public class SKToast: NSObject {
     
     
     /// HUD Customization Properties
-    fileprivate var messageFont              : UIFont            = UIFont.systemFont(ofSize  : 16, weight  : .regular)
-    fileprivate var messageTextColor         : UIColor           = UIColor.white
+    fileprivate var messageFont              : UIFont = UIFont.systemFont(ofSize  : 16, weight  : .regular)
+    fileprivate var messageTextColor         : UIColor = UIColor.white
     fileprivate var toastViewBackgroundStyle : UIBlurEffect.Style = .dark
     
     
@@ -33,15 +33,7 @@ public class SKToast: NSObject {
     
     
     // MARK: - Initialization
-    private override init() {
-        super.init()
-        let delegate: UIApplicationDelegate = UIApplication.shared.delegate!
-        if let windowObj = delegate.window {
-            window = windowObj
-        } else {
-            window = UIApplication.shared.keyWindow
-        }
-        
+    private init() {
         toastView = nil
         statusLabel = nil
     }
@@ -250,6 +242,20 @@ public class SKToast: NSObject {
     
     public static func backgroundStyle(_ backgroundStyle: UIBlurEffect.Style) {
         self.shared.toastViewBackgroundStyle = backgroundStyle
+    }
+    
+    
+    // MARK: - Helper Methods
+    @available(iOS 13.0, *)
+    fileprivate func getKeyWindow() -> UIWindow? {
+        let window = UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .map({$0 as? UIWindowScene})
+            .compactMap({$0})
+            .first?.windows
+            .filter({$0.isKeyWindow}).first
+        
+        return window
     }
 }
 

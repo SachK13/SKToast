@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SKToast'
-  s.version          = '1.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'SKToast is a simple and light weight Android like toast view for your iOS app written in swift.'
 
 # This description is used to generate tags and improve search results.
