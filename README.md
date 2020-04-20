@@ -1,8 +1,8 @@
 # SKToast
 
-[![Version](https://img.shields.io/cocoapods/v/SKToast.svg?style=flat)](http://cocoapods.org/pods/SKToast)
-[![License](https://img.shields.io/cocoapods/l/SKToast.svg?style=flat)](http://cocoapods.org/pods/SKToast)
-[![Platform](https://img.shields.io/cocoapods/p/SKToast.svg?style=flat)](http://cocoapods.org/pods/SKToast)
+[![Version](https://img.shields.io/cocoapods/v/SKToast.svg?style=flat)](https://cocoapods.org/pods/SKToast)
+[![License](https://img.shields.io/cocoapods/l/SKToast.svg?style=flat)](https://cocoapods.org/pods/SKToast)
+[![Platform](https://img.shields.io/cocoapods/p/SKToast.svg?style=flat)](https://cocoapods.org/pods/SKToast)
 
 ![SKToast](SKToastView.gif)
 
